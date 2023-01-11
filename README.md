@@ -9,4 +9,9 @@
 
 5. font awesome for rating symbol added without installation direct linking using cdn link in html
 
-6. 
+6. useParams provided by react-router-dom in movieList lets us to import the data from the parent the dynamic link that we get from route which looks like this - movies/:type and we import it and provide that data to the link from movieList components.
+ <Route path='movies/:type' element={<h1> Movies list page</h1>}></Route>
+ // The type is the params we are importing in the MovieList component.
+
+7. 
+ 
