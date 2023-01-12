@@ -4,7 +4,6 @@ import './Card.css';
 import { Link } from 'react-router-dom';
 
 const Card = ({ movie }) => {
-
    const [isLoading, setIsLoading] = useState(true);
 
    useEffect(() => {
@@ -15,16 +14,16 @@ const Card = ({ movie }) => {
 
    return (
       <>
-         {isLoading ? 
+         {isLoading ? (
             <div className="cards">
                <SkeletonTheme color="#202020" highlightColor="#444">
                   <Skeleton height={300} duration={2} />
                </SkeletonTheme>
             </div>
-          : (
+         ) : (
             <Link to={`/movie/${movie.id}`} style={{ textDecoration: 'none', color: 'white' }}>
                <div className="cards">
-                  <img className="cards__img" src={`https://image.tmdb.org/t/p/original/${movie ? movie.poster_path : ''}`} />
+                  <img className="cards__img" alt=" " src={`https://image.tmdb.org/t/p/original/${movie ? movie.poster_path : ''}`} />
                   <div className="cards__overlay">
                      <div className="cards__title">{movie ? movie.original_title : ''}</div>
                      <div className="cards__runtime">
@@ -33,7 +32,7 @@ const Card = ({ movie }) => {
                            {movie ? movie.vote_average : ''} <i className="fas fa-star"> </i>
                         </span>
                      </div>
-                     <div className="cards__description">{movie ? movie.overview.slice(0, 118)+'...':""}</div>
+                     <div className="cards__description">{movie ? movie.overview.slice(0, 118) + '...' : ''}</div>
                   </div>
                </div>
             </Link>
