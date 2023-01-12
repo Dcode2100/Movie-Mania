@@ -10,11 +10,13 @@ const MovieList = () => {
     const {type} = useParams()
     
     useEffect(() => {
-        getData()
+       getData();
+       // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     useEffect(() => {
-        getData()
+       getData();
+       // eslint-disable-next-line react-hooks/exhaustive-deps
     },[type])
 
     const getData = () =>{
