@@ -20,7 +20,7 @@ const Home = () => {
          <div className="Poster">
             <Carousel showThumbs={false} autoPlay={true} transitionTime={3} infiniteLoop={true} showStatus={false}>
                {popularMovies.map((movie) => (
-                  <Link style={{ textDecoration: 'none', color: 'white' }} to={`/movie/${movie.id}`}>
+                  <Link style={{ textDecoration: 'none', color: 'white' }}>
                      <div className="posterImage">
                         <img alt="" src={`https://image.tmdb.org/t/p/original/${movie && movie.backdrop_path}`} />
                      </div>
